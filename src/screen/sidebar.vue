@@ -58,16 +58,3 @@ export default {
   }
 };
 </script>
-
-<style>
-.logoutContainer {
-    padding: 30;
-    padding-top: 0;
-  }
-.logoutbtn {
-    padding-top: 30;
-    flex-direction: row;
-    border-top-width: 1;
-    border-top-color: #fff;
-  }
-</style>

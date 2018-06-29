@@ -61,9 +61,3 @@ export default {
   }
 };
 </script>
-
-<style>
-  .list {
-    flex: 1;
-  }
-</style>
