@@ -37,7 +37,7 @@ yarn
     * vuex: 3.0.1
 
 ## Folder structure
-   The store and is located in `src` folder. All the assets file are inside parent folder  `vue-native-starter-app` under assets folder.
+   The store located in `src` folder. All the assets file are inside parent folder  `vue-native-starter-app` under assets folder.
     All the screens which refer to the main route are under `screen` and the compenents related to those screens are inside `components`.
 
 ## Usage of vuelidate and vuex 
