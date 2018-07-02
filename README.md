@@ -3,7 +3,7 @@
 
 Sample Login App with Vue Native and Vuex with Validations
 
-## GIF
+## DEMO
 
 <img alt="vue-native-starter app" src="gif/vue-native-starter-app.gif" width="260" height="400" />
 
