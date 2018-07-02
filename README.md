@@ -37,5 +37,13 @@ yarn
     * vuex: 3.0.1
 
 ## Folder structure
-    The store and is located in src folder. All the assets file are inside parent folder `vue-native-starter-app` under assets folder.
-    All the screens which refer to the main route are under screen and the compenents related to those screens are inside components.
+   The store and is located in `src` folder. All the assets file are inside parent folder  `vue-native-starter-app` under assets folder.
+    All the screens which refer to the main route are under `screen` and the compenents related to those screens are inside `components`.
+
+## Usage of vuelidate and vuex 
+
+* Validation
+    Since vuelidate cannot identify the events for dirty natively. We can $touched for a partiuclar event to mark a field as dirty. For example in login.vue, for email field we have used `:on-blur="() => $v.emailValue.$touch()"` to mark a field as dirty when the field loses it's focus.
+
+* Store
+    We have used vuex for state management. The actions, mutations and the store are specified under `store/index.js`. The actions specify the action which are fired using `store.dispatch` method. The mutations specify the modifications on an object for a particular action.
