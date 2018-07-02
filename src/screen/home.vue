@@ -30,7 +30,7 @@
 import React from 'react';
 import Item from '../components/item';
 import { Dimensions } from 'react-native';
-import store from '../../store';
+import store from '../store';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 

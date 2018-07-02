@@ -34,7 +34,7 @@ import { NavigationActions } from 'vue-native-router';
 import launchScreenBg from "../../assets/launchscreen-bg.png";
 import launchscreenLogo from "../../assets/logo-kitchen-sink.png";
 import { required, email } from 'vuelidate/lib/validators'
-import store from '../../store';
+import store from '../store';
 
 export default {
   props: {

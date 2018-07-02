@@ -19,7 +19,7 @@ import drawerCover from "../../assets/drawer-cover.png";
 import { NavigationActions } from 'vue-native-router';
 import drawerImage from "../../assets/logo-kitchen-sink.png";
 import thumbnail from "../../assets/user.png";
-import store from '../../store';
+import store from '../store';
 
 const deviceHeight = Dimensions.get("window").height;
 const deviceWidth = Dimensions.get("window").width;
