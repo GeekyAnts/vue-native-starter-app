@@ -5,7 +5,7 @@ Sample Login App with Vue Native and Vuex with Validations
 
 ## DEMO
 
-<img alt="vue-native-starter app" src="gif/vue-native-starter-app.gif" width="260" height="400" />
+<img alt="vue-native-starter app" src="gif/vue-native-starter-app.gif" border="2" width="260" height="400" />
 
 ## Installation
 
@@ -37,7 +37,7 @@ yarn
     * vuex: 3.0.1
 
 ## Folder structure
-   The store located in `src` folder. All the assets file are inside parent folder  `vue-native-starter-app` under assets folder.
+   The store files are located in `src` folder. All the assets file are under assets folder.
     All the screens which refer to the main route are under `screen` and the compenents related to those screens are inside `components`.
 
 ## Usage of vuelidate and vuex 
