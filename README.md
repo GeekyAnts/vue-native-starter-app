@@ -47,3 +47,7 @@ yarn
 
 * Store
     We have used vuex for state management. The actions, mutations and the store are specified under `store/index.js`. The actions specify the action which are fired using `store.dispatch` method. The mutations specify the modifications on an object for a particular action.
+
+## License
+
+[MIT](http://opensource.org/licenses/MIT)
