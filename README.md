@@ -17,11 +17,11 @@ cd vue-native-starter-app
 yarn
 ```
 * **Run on iOS**
-    * Run `react native run ios` in your terminal
+    * Run `react-native run-ios` in your terminal
 
 - **Run on Android**
     * Make sure you have an `Android emulator` installed and running
-    * Run `react native run android` in your terminal
+    * Run `react-native run-android` in your terminal
 
 ## Libraries used
 
