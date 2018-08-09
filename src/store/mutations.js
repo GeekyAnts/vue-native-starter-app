@@ -1,17 +1,22 @@
-export function SET_POSTS (state, { posts}) {
+export function SET_POSTS(state, { posts }) {
   state.loadingPosts = false;
   state.posts = posts;
 }
 
-export function FETCHING_LISTS (state) {
+export function FETCHING_LISTS(state) {
   state.loadingPosts = true;
 }
 
-export function LOGGING_IN (state, status) {
+export function LOGGING_IN(state, status) {
   state.logging_in = status;
 }
 
-export function LOGIN_SUCCESFULL (state, {userObj}) {
+export function LOG_OUT(state) {
+  state.userObj = { email: "" };
+}
+
+export function LOGIN_SUCCESFULL(state, { userObj }) {
   state.userObj = userObj;
   state.logging_in = false;
+  state.logged_In = true;
 }

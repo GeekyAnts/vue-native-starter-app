@@ -1,4 +1,5 @@
 <template>
+
   <nb-container v-if="loaded" :style="{backgroundColor: '#fff'}">
       <nb-header>
         <nb-body>
@@ -29,12 +30,12 @@
 
 <script>
 import { Dimensions, Platform, AsyncStorage } from "react-native";
-import { Toast } from 'native-base';
-import { NavigationActions } from 'vue-native-router';
+import { Toast } from "native-base";
+import { NavigationActions } from "vue-native-router";
 import launchScreenBg from "../../assets/launchscreen-bg.png";
 import launchscreenLogo from "../../assets/logo-kitchen-sink.png";
-import { required, email } from 'vuelidate/lib/validators'
-import store from '../store';
+import { required, email } from "vuelidate/lib/validators";
+import store, { vuexLocal } from "../store";
 
 export default {
   props: {
@@ -43,7 +44,7 @@ export default {
     }
   },
   computed: {
-    logging_in () {
+    logging_in() {
       return store.state.logging_in;
     }
   },
@@ -58,34 +59,48 @@ export default {
   },
   data: function() {
     return {
-      emailValue: '',
-      password: '',
-      loaded: false
+      emailValue: "",
+      password: "",
+      loaded: true
     };
   },
-  created() {
-    AsyncStorage.getItem('email').then((val) => {
-      if (val) {
-        this.loaded = true
-        this.navigation.navigate('Home')
-        store.dispatch('SET_USER', {userObj: {email: val}})
+  created: async function() {
+    console.log("store.state: ", store.state.userObj.email);
+    // if (!store.state.userObj.email) {
+    //   this.loaded = true;
+    //   this.navigation.navigate("Home");
+    // }
+    // console.log(vuexLocal.restoreState.call());
+    // this.loaded = vuexLocal.restoreState.call("Vuex", store);
+    // ((key, storage) => {
+    //   console.log("logged in screen storage: ");
+    // });
+
+    console.log("vuexLocal: ", vuexLocal, store);
+    store._vm.$root.$on("storageReady", () => {
+      console.log("stateBeingFilled", store.state.userObj.email == undefined);
+      if (store.state.userObj.email != undefined) {
+        this.loaded = true;
+        this.navigation.navigate("Home");
+        store.dispatch("SET_USER", { userObj: { email: val } });
       } else {
-        this.loaded = true
+        this.loaded = true;
       }
-    })
+      // self.$store.dispatch('somethingThatDependsOnTheStateBeingFilled');
+    });
   },
   methods: {
     login() {
       if (this.emailValue && this.password && !this.$v.emailValue.$invalid) {
-        store.dispatch('LOGIN', {
-          userObj: {email: this.emailValue},
+        store.dispatch("LOGIN", {
+          userObj: { email: this.emailValue },
           navigate: this.navigation.navigate
         });
       } else {
         Toast.show({
-          text: 'Invalid Email or Password',
-          buttonText: 'Okay'
-        })
+          text: "Invalid Email or Password",
+          buttonText: "Okay"
+        });
       }
     }
   }
