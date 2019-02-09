@@ -7,9 +7,11 @@
     "test": "jest"
   },
   "dependencies": {
+    "@babel/core": "^7.2.2",
     "native-base": "^2.6.1",
     "react": "16.3.1",
-    "react-native": "0.55.4",
+    "react-native": "^0.58.0",
+    "scheduler": "^0.13.1",
     "vue-native-core": "0.0.7",
     "vue-native-helper": "0.0.8",
     "vue-native-router": "0.0.1-alpha.3",
@@ -18,7 +20,7 @@
   },
   "devDependencies": {
     "babel-jest": "23.2.0",
-    "babel-preset-react-native": "4.0.0",
+    "babel-preset-react-native": "^5.0.2",
     "jest": "23.2.0",
     "react-test-renderer": "16.3.1",
     "vue-native-scripts": "0.0.10"

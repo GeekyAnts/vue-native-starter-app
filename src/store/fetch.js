@@ -1,11 +1,11 @@
 const baseURL = 'https://jsonplaceholder.typicode.com';
 
 export function _fetch (path) {
-  return fetch({
-    method: 'GET',
-    url: `${baseURL}/${path}`
-  })
-  .then((response) => response.json());
+  return fetch('https://jsonplaceholder.typicode.com/posts')
+  .then((response) => {
+    console.log(response)
+    return response.json()
+  }).catch((error) => console.log(error))
 }
 
 export function fetchPosts (type) {

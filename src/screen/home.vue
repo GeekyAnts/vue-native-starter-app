@@ -1,5 +1,5 @@
 <template>
-    <nb-container :style="{flex:1, backgroundColor: '#fff'}">
+    <nb-container class="container">
         <nb-header>
           <nb-left>
             <nb-button
@@ -61,3 +61,10 @@ export default {
   }
 };
 </script>
+
+<style>
+.container {
+  flex:1;
+  background-color: green;
+}
+</style>

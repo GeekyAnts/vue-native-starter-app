@@ -1,5 +1,15 @@
+var semver = require('semver');
+
+var reactNativeVersionString = require("react-native/package.json").version;
+var reactNativeMinorVersion = semver(reactNativeVersionString).minor;
+
+if (reactNativeMinorVersion >= 56) {
+  upstreamTransformer = require("metro/src/reactNativeTransformer");
+  } else if (reactNativeMinorVersion >= 52) {
+  upstreamTransformer = require("metro/src/transformer");
+}
 // For React Native version 0.52 or later
-var upstreamTransformer = require("metro/src/transformer");
+// var upstreamTransformer = require("metro/src/transformer");
 
 // For React Native version 0.47-0.51
 // var upstreamTransformer = require("metro-bundler/src/transformer");
