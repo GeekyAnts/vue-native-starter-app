@@ -7,6 +7,15 @@ Sample Login App with Vue Native and Vuex with Validations
 
 <img alt="vue-native-starter app" src="gif/vue-native-starter-app.gif" width="260" height="400" />
 
+
+## About
+
+   Vue Native starter app by [GeekyAnts](https://geekyants.com?utm_source=github&utm_medium=opensource&utm_campaign=vue-native-starter-app).
+
+   [Mobile engineering](https://geekyants.com/service/hire-mobile-app-development-services?utm_source=github&utm_medium=opensource&utm_campaign=vue-native-starter-app)
+   and [cross-platform development](https://geekyants.com/solution/universal-and-cross-platform-app-development-services?utm_source=github&utm_medium=opensource&utm_campaign=vue-native-starter-app)
+   experts.
+
 ## Installation
 
 * **Clone and install packages**
